@@ -1,3 +1,5 @@
+wand
+numpy
 beautifulsoup4==4.4.1
 PyYAML==3.11
 requests==2.12.4

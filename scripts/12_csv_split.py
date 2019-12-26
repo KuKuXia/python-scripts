@@ -1,12 +1,13 @@
-import sys
-import os
 import csv
+import os
+
 import argparse
+import sys
 
 """
 
 Splits a CSV file into multiple files based on command line arguments.
-
+    
     Arguments:
 
     `-h`: help file of usage of the script
@@ -25,6 +26,7 @@ Splits a CSV file into multiple files based on command line arguments.
     ```
     # split csv by every 100 rows
     >> python csv_split.py -i input.csv -o output -r 100
+    >> python 12_csv_split.py -i ./data/12_sample_csv.csv -o ./data/sample_csv -r 10
     ```
 
 """

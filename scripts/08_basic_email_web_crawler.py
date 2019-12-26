@@ -1,5 +1,5 @@
-import requests
 import re
+import requests
 
 # get url
 url = input('Enter a URL (include `http://`): ')
@@ -17,5 +17,6 @@ emails = re.findall('([\w\.,]+@[\w\.,]+\.\w+)', html)
 
 # print the number of links in the list
 print("\nFound {} links".format(len(links)))
+print(links[:10])
 for email in emails:
     print(email)

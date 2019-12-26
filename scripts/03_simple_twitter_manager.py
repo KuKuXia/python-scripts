@@ -19,7 +19,7 @@ if __name__ == '__main__':
     zombie_follows = [following_id for following_id in
                       following_ids if following_id not in follower_ids]
 
-    confirm = raw_input(
+    confirm = input(
         "Are you sure you want to unfollow {0} tweeps [y|n]? ".format(
             (len(zombie_follows))))
     if confirm.lower() == 'y':

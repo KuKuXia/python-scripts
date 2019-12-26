@@ -3,7 +3,7 @@ import os
 
 # constants
 PATH = './'
-PATTERN = '*.md'
+PATTERN = '*.py'
 
 
 def get_file_names(filepath, pattern):

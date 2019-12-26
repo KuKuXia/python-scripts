@@ -1,11 +1,17 @@
-import os
 import glob
+import os
 
-os.chdir("/Users/mikeherman/repos/bugs/se-platform/se/core/permissions")
-for file in glob.glob("*.json"):
+DIR = "D:\\MyDownload\\"
+EXTENSION = '*.ass'
+
+os.chdir(DIR)
+for file in glob.glob(EXTENSION):
     file_name = os.path.splitext(file)[0]
     extension = os.path.splitext(file)[1]
-    new_file_name = file_name[:-6] + extension
+    file_name = file_name.split('.')[:3]
+
+    new_file_name = '.'.join(file_name[:3]) + extension
+    print(new_file_name)
     try:
         os.rename(file, new_file_name)
     except OSError as e:

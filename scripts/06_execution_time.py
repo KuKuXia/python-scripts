@@ -11,9 +11,9 @@ For example:
 
 """
 
+import random
 
 import time
-import random
 
 
 class ExecutionTime:
