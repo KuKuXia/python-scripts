@@ -107,7 +107,7 @@ def parse_file(arguments):
 
             current_output = os.path.join(  # Create new output file
                 output_path,
-                "{}-{}.csv".format(output_file, current_chunk)
+                "{}_{}.csv".format(output_file, current_chunk)
             )
 
             # Add header

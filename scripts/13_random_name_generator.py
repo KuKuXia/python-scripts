@@ -9,10 +9,10 @@ def random_name_generator(first, second, x):
          - list of last names
          - number of random names
     """
-    names = []
+    names_list = []
     for i in range(x):
-        names.append("{0} {1}".format(choice(first), choice(second)))
-    return set(names)
+        names_list.append("{0} {1}".format(choice(first), choice(second)))
+    return set(names_list)
 
 
 first_names = ["Drew", "Mike", "Landon", "Jeremy", "Tyler", "Tom", "Avery"]

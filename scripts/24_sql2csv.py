@@ -1,6 +1,7 @@
-import sys
 import csv
+
 import sqlite3
+import sys
 
 if len(sys.argv) < 3:
     print("Use: {0} DATABASE_NAME TABLE_NAME".format(sys.argv[0]))

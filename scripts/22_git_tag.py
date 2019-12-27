@@ -1,7 +1,6 @@
 import subprocess
 import sys
 
-
 if len(sys.argv) == 3:
     tag = sys.argv[1]
     commit = sys.argv[2]

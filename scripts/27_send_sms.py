@@ -1,8 +1,7 @@
 import requests
 
-message = raw_input('Enter a Message: ')
-number = raw_input('Enter the phone number: ')
-
+message = input('Enter a Message: ')
+number = input('Enter the phone number: ')
 
 payload = {'number': number, 'message': message}
 r = requests.post("http://textbelt.com/text", data=payload)
