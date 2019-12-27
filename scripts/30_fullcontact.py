@@ -1,5 +1,6 @@
 import os
 import sys
+
 import requests
 
 """
@@ -12,7 +13,6 @@ Example usage:
 $ python 30_fullcontact.py email SOME@EMAIL.COM
 $ python 30_fullcontact.py twitter TWITTER_HANDLE
 """
-
 
 # constants
 

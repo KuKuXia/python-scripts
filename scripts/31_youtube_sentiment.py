@@ -1,4 +1,5 @@
 import sys
+
 import requests
 from bs4 import BeautifulSoup as bs4
 
@@ -18,9 +19,13 @@ def get_arguments():
 
 
 def get_comments(url):
-    html = requests.get('https://plus.googleapis.com/u/0/_/widget/render/comments?first_party_property=YOUTUBE&href=' + url)
+    proxies = {"http": "http://127.0.0.1:1080", "https": "http://127.0.0.1:1080", }
+    html = requests.get(
+        'https://plus.googleapis.com/u/0/_/widget/render/comments?first_party_property=YOUTUBE&href=' + url,
+        proxies=proxies)
     soup = bs4(html.text, 'html.parser')
-    return [comment.string for comment in soup.findAll('div', class_='Ct')]
+    print(soup)
+    return [comment.string for comment in soup.findAll('yt-formatted-string', id='content-text')]
 
 
 def calculate_sentiment(comments):
@@ -47,7 +52,8 @@ def calculate_sentiment(comments):
 
 
 def main():
-    url = get_arguments()
+    # url = get_arguments()
+    url = 'https://www.youtube.com/watch?v=iBt2aTjCNmI'
     if url:
         comments = get_comments(url)
         if len(comments) <= 0:
